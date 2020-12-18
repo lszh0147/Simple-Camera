@@ -22,7 +22,7 @@ class Config(context: Context) : BaseConfig(context) {
         set(path) = prefs.edit().putString(SAVE_PHOTOS, path).apply()
 
     var isSoundEnabled: Boolean
-        get() = prefs.getBoolean(SOUND, true)
+        get() = prefs.getBoolean(SOUND, false)
         set(enabled) = prefs.edit().putBoolean(SOUND, enabled).apply()
 
     var focusBeforeCapture: Boolean
@@ -30,7 +30,7 @@ class Config(context: Context) : BaseConfig(context) {
         set(focus) = prefs.edit().putBoolean(FOCUS_BEFORE_CAPTURE, focus).apply()
 
     var volumeButtonsAsShutter: Boolean
-        get() = prefs.getBoolean(VOLUME_BUTTONS_AS_SHUTTER, false)
+        get() = prefs.getBoolean(VOLUME_BUTTONS_AS_SHUTTER, true)
         set(volumeButtonsAsShutter) = prefs.edit().putBoolean(VOLUME_BUTTONS_AS_SHUTTER, volumeButtonsAsShutter).apply()
 
     var turnFlashOffAtStartup: Boolean
